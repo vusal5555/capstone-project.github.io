@@ -33,6 +33,7 @@ const Navigation = () => {
               SIGN IN
             </Link>
           )}
+
           <CardIcon></CardIcon>
         </div>
         {isCartOpen && <CartDropdown></CartDropdown>}
