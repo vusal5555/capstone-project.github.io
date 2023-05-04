@@ -17,6 +17,11 @@ export const Preview = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
 `;
 
 // .category-preview-container {

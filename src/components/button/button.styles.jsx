@@ -23,6 +23,10 @@ export const BaseButton = styled.button`
     color: black;
     border: 1px solid black;
   }
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const GoogleSignIn = styled(BaseButton)`

@@ -8,6 +8,10 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 25px;
   align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    height: 100%;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -21,6 +25,10 @@ export const NavLinksContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const NavLink = styled(Link)`
