@@ -59,6 +59,27 @@ export const CartContext = createContext({
   cartCount: 0,
 });
 
+const INITIAL_STATE = {
+  isCartOpen: true,
+  cartItems: null,
+  totalPriceValue: 0,
+  cartCount: 0,
+};
+
+const cartReducer = (state, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
+    case 'SET_CART-ITEMS':
+      return {
+        ...state,
+        ...payload,
+      };
+    default:
+      throw new Error(`Undhandled type ${type}`);
+  }
+};
+
 export const CartProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);

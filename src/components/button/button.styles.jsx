@@ -17,6 +17,7 @@ export const BaseButton = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: white;
@@ -24,8 +25,11 @@ export const BaseButton = styled.button`
     border: 1px solid black;
   }
 
-  @media only screen and (max-width: 600px) {
-    width: 90%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
   }
 `;
 
@@ -50,8 +54,3 @@ export const Inverted = styled(BaseButton)`
     border: none;
   }
 `;
-
-// .shopping-icon {
-//   width: 24px;
-//   height: 24px;
-// }
