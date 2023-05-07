@@ -36,15 +36,18 @@ export const Quantity = styled.span`
 
 export const Increment = styled.span`
   cursor: pointer;
+  user-select: none;
 `;
 
 export const Decrement = styled.span`
   cursor: pointer;
+  user-select: none;
 `;
 
 export const RemoveButton = styled.div`
   padding-left: 12px;
   cursor: pointer;
+  user-select: none;
 `;
 // .checkout-item-container {
 //   width: 100%;

@@ -27,9 +27,6 @@ export const BaseButton = styled.button`
 
   @media only screen and (max-width: 1000px) {
     width: 100%;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
   }
 `;
 

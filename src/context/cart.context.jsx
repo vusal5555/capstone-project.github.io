@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useReducer, useState } from 'react';
 
 const addCart = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
@@ -60,8 +60,8 @@ export const CartContext = createContext({
 });
 
 const INITIAL_STATE = {
-  isCartOpen: true,
-  cartItems: null,
+  isCartOpen: false,
+  cartItems: [],
   totalPriceValue: 0,
   cartCount: 0,
 };
@@ -75,8 +75,13 @@ const cartReducer = (state, action) => {
         ...state,
         ...payload,
       };
+    case 'SET_IS_CART_OPEN':
+      return {
+        ...state,
+        isCartOpen: payload,
+      };
     default:
-      throw new Error(`Undhandled type ${type}`);
+      throw new Error(`Undhandled type of ${type}`);
   }
 };
 

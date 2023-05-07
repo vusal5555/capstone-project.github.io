@@ -23,11 +23,11 @@ const Checkoutitem = ({ cartItem }) => {
       </ImgContainer>
       <Name>{cartItem.name}</Name>
       <Quantity>
-        <Increment onClick={() => addCartItems(cartItem)}>&#10094;</Increment>{' '}
+        <Increment onClick={() => removeCartItems(cartItem)}>
+          &#10094;
+        </Increment>{' '}
         {cartItem.quantity}
-        <Decrement onClick={() => removeCartItems(cartItem)}>
-          &#10095;
-        </Decrement>
+        <Decrement onClick={() => addCartItems(cartItem)}>&#10095;</Decrement>
       </Quantity>
       <Price className="price">{cartItem.price}$</Price>
       <RemoveButton onClick={() => deleteCartItems(cartItem)}>
