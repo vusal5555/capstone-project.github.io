@@ -31,7 +31,7 @@ export const Price = styled.span`
 export const Quantity = styled.span`
   width: 23%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
 `;
 
 export const Increment = styled.span`

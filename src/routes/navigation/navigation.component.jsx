@@ -7,17 +7,18 @@ import {
   LogoContainer,
   NavLink,
 } from './navigation.styles';
-
-import { UserContext } from '../../context/user.context';
-import { useContext } from 'react';
-import { CartContext } from '../../context/cart.context';
+import { useSelector } from 'react-redux';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
+import { selectUser } from '../../store/user/user_selector';
 import { SignOutUser } from '../../utils/firebase.utils';
 import CardIcon from '../../components/card-icon/card-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
 const Navigation = () => {
-  const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContext);
+  const currentUser = useSelector(selectUser);
+  // const { currentUser } = useContext(UserContext);
+
+  const isCartOpen = useSelector(selectIsCartOpen);
 
   return (
     <Fragment>
